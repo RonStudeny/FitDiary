@@ -26,7 +26,7 @@ public partial class MainPage : ContentPage
 
         foreach (var exercise in app.Sessions[0].Exercises)
         {
-            ExerciseView exerciseView = new ExerciseView(exercise.ToString());
+            ExerciseView exerciseView = new ExerciseView(exercise.ExerciseName);
             exerciseView.GetTapRecognizer().Tapped += exercise.OnTap;
             ExerciseContainer.Children.Add(exerciseView);
         }
