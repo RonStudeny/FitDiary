@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:cv ="clr-namespace:FitDiary.Views.ContentViews"
+             x:Class="FitDiary.Views.ViewModels.MainPage">
+
+    <ScrollView x:Name="HomePage">
+        <VerticalStackLayout x:Name="ExerciseContainer"
+            Padding="30,0"
+            Spacing="25">
+            <Picker Title="Session" HorizontalTextAlignment="Center">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

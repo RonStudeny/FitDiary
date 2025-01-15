@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FitDiary.Views.ContentViews.ExerciseEntryView">
+    <Border BackgroundColor="LightGray"
+            HeightRequest="450">
+        <VerticalStackLayout>
+            <Label
+            x:Name="ExerciseName"
+            Text="{Binding ExerciseName}"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+            <Entry x:Name="WeightEntry" Placeholder="Weight" Text="{Binding Weight}"/>
+            <Entry x:Name="RepsEntry" Placeholder="Reps" Text="{Binding Reps}"/>
+            <Entry x:Name="SetsEntry" Placeholder="Sets" Text="{Binding Sets}"/>
+            <HorizontalStackLayout Spacing="10" HorizontalOptions="Center" VerticalOptions="Center">
+                <Button x:Name="SaveButton" Clicked="SaveClicked" BackgroundColor="LightBlue"/>
+                <Button x:Name="CancelButton" Clicked="CancelClicked" BackgroundColor="OrangeRed"/>
+            </HorizontalStackLayout>
+
+        </VerticalStackLayout>
+    </Border>
+
+</ContentView>

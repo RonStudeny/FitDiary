@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FitDiary.Views.Modals.ExerciseEntryModal"
+             Title="ExerciseEntryModal"
+             Shell.PresentationMode="Modal"
+             BackgroundColor="#80C5C5C5">
+    
+    <Border BackgroundColor="White"
+        HeightRequest="500"
+        WidthRequest="320">
+        <VerticalStackLayout>
+            <Label
+        x:Name="ExerciseName"
+        Text="{Binding ExerciseName}"
+        VerticalOptions="Center" 
+        HorizontalOptions="Center"
+        Margin="25"        
+         />
+
+            <HorizontalStackLayout Spacing="30" HorizontalOptions="Center" VerticalOptions="Center">
+                <Label Text="Weight (kg):"/>
+                <Entry x:Name="WeightEntry" Placeholder="Weight" Text="{Binding Weight}" Keyboard="Numeric"/>
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout Spacing="30" HorizontalOptions="Center" VerticalOptions="Center">
+                <Label Text="Reps:"/>
+                <Entry x:Name="RepsEntry" Placeholder="Reps" Text="{Binding Reps}" Keyboard="Numeric"/>
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout Spacing="30" HorizontalOptions="Center" VerticalOptions="Center">
+                <Label Text="Sets:"/>
+                <Entry x:Name="SetsEntry" Placeholder="Sets" Text="{Binding Sets}" Keyboard="Numeric"/>
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout Spacing="10" HorizontalOptions="Center" VerticalOptions="Center" Margin="25">
+                <Button x:Name="SaveButton" Clicked="SaveClicked" BackgroundColor="LightBlue" Text="Save" WidthRequest="100" />
+                <Button x:Name="CancelButton" Clicked="CancelClicked" BackgroundColor="OrangeRed" Text="Cancel"  WidthRequest="100" />
+            </HorizontalStackLayout>
+            
+                <Button x:Name="DeleteButton" Clicked="DeleteClicked" BackgroundColor="Red" Text="Delete" WidthRequest="100" />
+
+            <Editor x:Name="FileOutput" IsReadOnly="True"/>
+
+        </VerticalStackLayout>
+    </Border>
+</ContentPage>
