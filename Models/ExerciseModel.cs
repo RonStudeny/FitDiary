@@ -14,7 +14,11 @@ public class ExerciseModel
         Weight = weight;
         Reps = reps;
         Sets = sets;
-        
+
+    }
+    public ExerciseModel(string name)
+    {
+        ExerciseName = name;
     }
 
     public string ExerciseName { get; set; }

@@ -15,9 +15,12 @@ public partial class MainPage : ContentPage
 
         AppModel app = new AppModel();
         app.Sessions.Add(new SessionModel());
-        app.Sessions[0].Exercises.Add(new ExerciseModel("Bench press", 75, 5, 3));
-        app.Sessions[0].Exercises.Add(new ExerciseModel("Squat", 85, 9, 3));
-        app.Sessions[0].Exercises.Add(new ExerciseModel("Deadlift", 120, 3, 2));
+        app.Sessions[0].Exercises.Add(new ExerciseModel("Bench press"));
+        app.Sessions[0].Exercises.Add(new ExerciseModel("Squat"));
+        app.Sessions[0].Exercises.Add(new ExerciseModel("Deadlift"));
+        app.Sessions[0].Exercises.Add(new ExerciseModel("Pulldown"));
+        app.Sessions[0].Exercises.Add(new ExerciseModel("Row"));
+
 
         
         
